@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 first
+=======
+first
+second
+Third
+>>>>>>> test
