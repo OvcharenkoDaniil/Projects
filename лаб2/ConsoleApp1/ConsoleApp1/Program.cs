@@ -125,6 +125,11 @@ namespace ConsoleApp1
             Console.WriteLine($"Распаковка: {uint_value}");
             Console.WriteLine();
 
+            Console.WriteLine("Неявно типизированная переменная");
+            var variable = 10.2m;
+            Console.WriteLine($"Неявно типизированная переменная с помощью ключевого слова var {variable}");
+            Console.WriteLine();
+
             Console.ReadKey();
 
         }
