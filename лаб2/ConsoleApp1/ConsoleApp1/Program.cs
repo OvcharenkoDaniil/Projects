@@ -135,6 +135,9 @@ namespace ConsoleApp1
             Console.WriteLine($"Значение переменной nullable: {nullable}");
             Console.WriteLine();
 
+            //var temp = 23;
+            //err = 2.54f; - Ошибка при присвоении переменной типа var значения другого типа (float)
+
             Console.ReadKey();
 
         }
