@@ -130,6 +130,11 @@ namespace ConsoleApp1
             Console.WriteLine($"Неявно типизированная переменная с помощью ключевого слова var {variable}");
             Console.WriteLine();
 
+            Console.WriteLine("Переменная Nullable");
+            int? nullable = null;
+            Console.WriteLine($"Значение переменной nullable: {nullable}");
+            Console.WriteLine();
+
             Console.ReadKey();
 
         }
