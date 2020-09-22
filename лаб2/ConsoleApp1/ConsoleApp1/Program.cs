@@ -117,6 +117,13 @@ namespace ConsoleApp1
             Console.WriteLine($" Переменная типа long имеет значение: {long_value}");
             Console.WriteLine();
 
+            
+            Console.WriteLine("Упаковка и распаковка значимых типов: ");
+            object new_object = uint_value;
+            Console.WriteLine($"Упаковка: {new_object}");
+            uint_value = (uint)new_object;
+            Console.WriteLine($"Распаковка: {uint_value}");
+            Console.WriteLine();
 
             Console.ReadKey();
 
