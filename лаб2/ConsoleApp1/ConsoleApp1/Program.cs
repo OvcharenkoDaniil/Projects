@@ -76,7 +76,47 @@ namespace ConsoleApp1
             Console.WriteLine($"Переменная типа ulong: {ulong_value}");
             Console.WriteLine();
 
-           
+            Console.WriteLine("Неявное приведение типов: ");
+            long_value = int_value;
+            int_value = short_value;
+            uint_value = ushort_value;
+            float_value = byte_value;
+            double_value = sbyte_value;
+            Console.WriteLine("1.Неявное приведение int к long: long_value = int_value");
+            Console.WriteLine("2.Неявное приведение ushort к uint: uint_value = ushort_value");
+            Console.WriteLine("3.Неявное приведение short к int: int_value = short_value ");
+            Console.WriteLine("4.Неявное приведение byte к float: float_value = byte_value");
+            Console.WriteLine("5.Неявное приведение sbyte к double:  double_value = sbyte_value");
+            Console.WriteLine();
+
+            Console.WriteLine($" Переменная типа long имеет значение: {long_value}");
+            Console.WriteLine($" Переменная типа uint имеет значение: {uint_value}");
+            Console.WriteLine($" Переменная типа int имеет значение: {int_value}");
+            Console.WriteLine($" Переменная типа float имеет значение: {float_value}");
+            Console.WriteLine($" Переменная типа double имеет значение: {double_value}");
+            Console.WriteLine();
+
+            Console.WriteLine("Явное приведение типов: ");
+            ulong_value = (ulong)uint_value;
+            byte_value = (byte)char_value;
+            double_value = (double)float_value;
+            decimal_value = (decimal)ushort_value;
+            long_value = (long)sbyte_value;
+
+            Console.WriteLine("1.Явное приведение uint к ulong: ulong_value = (ulong)uint_value");
+            Console.WriteLine("2.Явное приведение char к byte: byte_value = (byte)char_value");
+            Console.WriteLine("3.Явное приведение float к double: double_value = (double)float_value ");
+            Console.WriteLine("4.Явное приведение ushort к decimal: decimal_value = (decimal)ushort_value");
+            Console.WriteLine("5.Явное приведение sbyte к long:  long_value = (long)sbyte_value");
+            Console.WriteLine();
+
+            Console.WriteLine($" Переменная типа ulong имеет значение: {ulong_value}");
+            Console.WriteLine($" Переменная типа byte имеет значение: {byte_value}");
+            Console.WriteLine($" Переменная типа double имеет значение: {double_value}");
+            Console.WriteLine($" Переменная типа decimal имеет значение: {decimal_value}");
+            Console.WriteLine($" Переменная типа long имеет значение: {long_value}");
+            Console.WriteLine();
+
 
             Console.ReadKey();
 
