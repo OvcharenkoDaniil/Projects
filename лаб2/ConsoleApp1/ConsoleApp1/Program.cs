@@ -248,7 +248,18 @@ namespace ConsoleApp1
             }
             else Console.WriteLine("Строка не является пустой");
 
-
+            Console.WriteLine("Матрица:");
+            int[,] matrix = new int[3, 3];
+            Random rand_elem = new Random();
+            for (int I = 0; I < 3; I++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    matrix[I, j] = rand_elem.Next(1, 10);
+                    Console.Write("{0}  ", matrix[I, j]);
+                }
+                Console.WriteLine();
+            }
 
 
 
