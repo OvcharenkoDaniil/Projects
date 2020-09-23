@@ -166,16 +166,19 @@ namespace ConsoleApp1
             // Интерполяция строки:
             // Console.WriteLine($"текст {строка} ");
 
-            string str3, str4, str5,str6;
+            string str3, str4, str5, str6;
             int num = 0;
             bool flag = true;
+
+            StringBuilder myStringBuilder = new StringBuilder("Hello World!");
+            Console.WriteLine($"Строка созданная при помощи StringBuilder: {myStringBuilder}");
 
             Console.WriteLine("Введите строку №3: ");
             str3 = Console.ReadLine();
             Console.WriteLine("Введите строку №4: ");
             str4 = Console.ReadLine();
 
-            
+
             Console.WriteLine($"Сцепление двух строк с помощью метода String.Concat()");
             str5 = String.Concat(str3, str4);
             Console.WriteLine($"Выводим 5-ю строку: {str5}");
@@ -201,7 +204,7 @@ namespace ConsoleApp1
 
             Console.WriteLine("Введите строку, состоящую из нескольких слов: ");
             str6 = Console.ReadLine();
-            string[] words = str6.Split( ' ' );
+            string[] words = str6.Split(' ');
             Console.WriteLine("Слова, полученные после разбиения строки: ");
             foreach (string s in words)
             {
@@ -226,6 +229,27 @@ namespace ConsoleApp1
             Console.WriteLine("Теперь удалим подстроку: ");
             str3 = str3.Remove(num, str4.Length);
             Console.WriteLine($"Cтрока после удаления из нее подстроки: {str3}");
+
+            string empty_str = "", null_str = null;
+            bool temp = String.IsNullOrEmpty(null_str);
+
+            if (temp)
+            {
+                Console.WriteLine("Строка является пустой");
+            }
+            else Console.WriteLine("Строка не является пустой");
+
+
+            temp = String.IsNullOrEmpty(empty_str);
+
+            if (temp)
+            {
+                Console.WriteLine("Строка является пустой");
+            }
+            else Console.WriteLine("Строка не является пустой");
+
+
+
 
 
 
