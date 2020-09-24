@@ -358,7 +358,18 @@ namespace ConsoleApp1
             //Console.WriteLine();
 
             (int, string, char, string, ulong) tuple = (1, "how are you?", 't', "I'm ok", 12345);
-            Console.WriteLine($"Все элементы кортежа: {tuple.Item1}, {tuple.Item2}, {tuple.Item3}, {tuple.Item4}, {tuple.Item5}");
+            Console.WriteLine($"Все элементы кортежа №1: {tuple.Item1}, {tuple.Item2}, {tuple.Item3}, {tuple.Item4}, {tuple.Item5}");
+
+            (int, string, char, string, ulong) tuple2 = (1, "how are you?", 't', "I'm ok", 12345);
+            Console.WriteLine($"Все элементы кортежа №2: {tuple2.Item1}, {tuple2.Item2}, {tuple2.Item3}, {tuple2.Item4}, {tuple2.Item5}");
+
+            if(tuple==tuple2)
+            {
+                Console.WriteLine("Кортежи равны");
+            }
+            else Console.WriteLine("Кортежи не равны");
+            Console.WriteLine();
+
             Console.WriteLine("1, 3 и 5 элементы кортежа: {0},{1},{2}",tuple.Item1, tuple.Item3, tuple.Item5);
             Console.WriteLine();
 
