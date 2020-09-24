@@ -349,13 +349,14 @@ namespace ConsoleApp1
             //    Console.Write($"{step_arr[2][i]} ");
             //}
             //Console.WriteLine();
-            Console.WriteLine("Неявно типизированные строка и массив: ");
-            var str7 = "HI!";
-            Console.WriteLine($"Строка: {str7}");
-            var arr = new[] { 1, 2, 3 };
-            Console.WriteLine("Массив: {0},{1},{2}",arr[0],arr[1],arr[2]);
 
+            //Console.WriteLine("Неявно типизированные строка и массив: ");
+            //var str7 = "HI!";
+            //Console.WriteLine($"Строка: {str7}");
+            //var arr = new[] { 1, 2, 3 };
+            //Console.WriteLine("Массив: {0},{1},{2}",arr[0],arr[1],arr[2]);
 
+            (int, string, char, string, ulong) tuple = (1, "how are you?", 't', "I'm ok", 12345);
 
 
 
