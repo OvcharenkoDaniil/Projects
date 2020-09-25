@@ -422,6 +422,14 @@ namespace ConsoleApp1
             }
             Console.WriteLine($"Максимальный элемент массива: {new_tuple.Item1}\n Минимальный элемент: {new_tuple.Item2}\n Сумма элементов: {new_tuple.Item3}\n Первая буква строки: {new_tuple.Item4}");
 
+            void a()
+            {
+                
+            }
+            void b1()
+            {
+                
+            }
             
 
 
