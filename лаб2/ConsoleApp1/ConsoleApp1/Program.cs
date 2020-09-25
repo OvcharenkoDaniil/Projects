@@ -357,31 +357,72 @@ namespace ConsoleApp1
             //Console.WriteLine("Массив: {0},{1},{2}",arr[0],arr[1],arr[2]);
             //Console.WriteLine();
 
-            (int, string, char, string, ulong) tuple = (1, "how are you?", 't', "I'm ok", 12345);
-            Console.WriteLine($"Все элементы кортежа №1: {tuple.Item1}, {tuple.Item2}, {tuple.Item3}, {tuple.Item4}, {tuple.Item5}");
+            //(int, string, char, string, ulong) tuple = (1, "how are you?", 't', "I'm ok", 12345);
+            //Console.WriteLine($"Все элементы кортежа №1: {tuple.Item1}, {tuple.Item2}, {tuple.Item3}, {tuple.Item4}, {tuple.Item5}");
 
-            (int, string, char, string, ulong) tuple2 = (1, "how are you?", 't', "I'm ok", 12345);
-            Console.WriteLine($"Все элементы кортежа №2: {tuple2.Item1}, {tuple2.Item2}, {tuple2.Item3}, {tuple2.Item4}, {tuple2.Item5}");
+            //(int, string, char, string, ulong) tuple2 = (1, "how are you?", 't', "I'm ok", 12345);
+            //Console.WriteLine($"Все элементы кортежа №2: {tuple2.Item1}, {tuple2.Item2}, {tuple2.Item3}, {tuple2.Item4}, {tuple2.Item5}");
 
-            if(tuple==tuple2)
+            //if(tuple==tuple2)
+            //{
+            //    Console.WriteLine("Кортежи равны");
+            //}
+            //else Console.WriteLine("Кортежи не равны");
+            //Console.WriteLine();
+
+            //Console.WriteLine("1, 3 и 5 элементы кортежа: {0},{1},{2}",tuple.Item1, tuple.Item3, tuple.Item5);
+            //Console.WriteLine();
+
+            //var (name, age) = ("Daniel", 18);
+            //Console.WriteLine($"My name is {name}, i'm {age}");
+            //var (char_temp, _, _, int_temp) = ('m', 4, 5, 777);
+            //Console.WriteLine($"Переменная типа char : {char_temp}, Число типа int: {int_temp}");
+            //Console.WriteLine();
+
+
+            Random rand = new Random();
+            int[] func_arr = new int[10];
+            string func_str = "This is a new tuple!";
+            Console.WriteLine($"Строка, передаваемая в локальную переменную: {func_str} ");
+            Console.WriteLine();
+
+            Console.WriteLine("Массив из рандомных чисел: ");
+            for (int I = 0; I < func_arr.Length; I++)
             {
-                Console.WriteLine("Кортежи равны");
+                func_arr[I] = rand.Next(1, 10);
+                Console.Write($"{func_arr[I]} ");
             }
-            else Console.WriteLine("Кортежи не равны");
             Console.WriteLine();
 
-            Console.WriteLine("1, 3 и 5 элементы кортежа: {0},{1},{2}",tuple.Item1, tuple.Item3, tuple.Item5);
-            Console.WriteLine();
+            (int, int, int, char) new_tuple = Actions(ref func_arr, func_str);
 
-            var (name, age) = ("Daniel", 18);
-            Console.WriteLine($"My name is {name}, i'm {age}");
-            var (char_temp, _, _, int_temp) = ('m', 4, 5, 777);
-            Console.WriteLine($"Переменная типа char : {char_temp}, Число типа int: {int_temp}");
-            Console.WriteLine();
+            (int, int, int, char) Actions(ref int[] act_arr, string act_str)
+            {
+                int Max, Min, Sum = 0;
+                char ch1 = act_str[0];
+                Min = Max = act_arr[0];
+                foreach (int i in act_arr)
+                {
+                    Sum += i;
 
+                    if (i > Max)
+                    {
+                        Max = i;
 
+                    }
+                    if (i < Min)
+                    {
+                        Min = i;
+                    }
+                        
+                    
+                }
+                (int, int, int, char) Tuple = (Max, Min, Sum, ch1);
+                return Tuple;
+            }
+            Console.WriteLine($"Максимальный элемент массива: {new_tuple.Item1}\n Минимальный элемент: {new_tuple.Item2}\n Сумма элементов: {new_tuple.Item3}\n Первая буква строки: {new_tuple.Item4}");
 
-
+            
 
 
 
