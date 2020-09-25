@@ -421,16 +421,32 @@ namespace ConsoleApp1
                 return Tuple;
             }
             Console.WriteLine($"Максимальный элемент массива: {new_tuple.Item1}\n Минимальный элемент: {new_tuple.Item2}\n Сумма элементов: {new_tuple.Item3}\n Первая буква строки: {new_tuple.Item4}");
-
+            Console.WriteLine();
             void a()
             {
-                
+                checked
+                {
+                    int iTemp1 = checked(2147483647);
+                    // iTemp1++;
+                    Console.WriteLine("При увеличении максимального значения происходит ошибка (при использовании checked)");
+                    Console.WriteLine($"Значение переменной (checked): {iTemp1}");
+                    
+                }
             }
-            void b1()
+            void b()
             {
-                
+                unchecked
+                {
+                    int iTemp2 = 2147483647;
+                    iTemp2++;
+                    Console.WriteLine("При увеличении максимального значения ошибка не происходит(без использования checked)"); 
+                    Console.WriteLine($"Измененное значение переменной (unchecked): {iTemp2}");
+                }
             }
-            
+            a();
+            Console.WriteLine();
+
+            b();
 
 
 
